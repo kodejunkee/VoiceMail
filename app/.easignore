@@ -1,0 +1,3 @@
+# Don't send lockfile to EAS — forces npm install instead of npm ci
+# This avoids lockfile format mismatches between local npm 11 and EAS npm 10
+package-lock.json

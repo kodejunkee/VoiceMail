@@ -1,0 +1,65 @@
+{
+  "expo": {
+    "name": "VoiceMail Assist",
+    "slug": "voicemail-assist",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "voicemail-assist",
+    "userInterfaceStyle": "dark",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.voicemail.assist",
+      "infoPlist": {
+        "NSSpeechRecognitionUsageDescription": "VoiceMail Assist uses speech recognition so you can control the app with your voice",
+        "NSMicrophoneUsageDescription": "VoiceMail Assist needs microphone access for voice commands"
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#000000",
+        "foregroundImage": "./assets/images/icon.png"
+      },
+      "edgeToEdgeEnabled": true,
+      "package": "com.voicemail.assist",
+      "permissions": [
+        "android.permission.RECORD_AUDIO",
+        "android.permission.INTERNET"
+      ]
+    },
+    "web": {
+      "output": "static",
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-speech-recognition",
+      "expo-secure-store",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/splash-icon.png",
+          "imageWidth": 200,
+          "resizeMode": "contain",
+          "backgroundColor": "#000000",
+          "dark": {
+            "backgroundColor": "#000000"
+          }
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "SUPABASE_URL": "https://xgfoobfohniiaokgvdgm.supabase.co",
+      "SUPABASE_ANON_KEY": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhnZm9vYmZvaG5paWFva2d2ZGdtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzc3MTc1NDMsImV4cCI6MjA5MzI5MzU0M30.YwGT-ecx9Npe0VlucfTCyxH5rLYadtqSyNXuD1ew16U",
+      "API_URL": "http://10.41.239.13:3001",
+      "router": {},
+      "eas": {
+        "projectId": "584b0ccc-ae5b-4de7-897c-9c2914c0d9c7"
+      }
+    }
+  }
+}
