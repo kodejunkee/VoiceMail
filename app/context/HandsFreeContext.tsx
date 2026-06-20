@@ -24,7 +24,7 @@ import {
 
 // ─── Constants ──────────────────────────────────────────
 const WAKE_PHRASE = 'hey voicemail';
-const SLEEP_PHRASES = ['go to sleep', 'goodnight', 'stop listening'];
+const SLEEP_PHRASES = ['go to sleep', 'goodnight', 'stop listening', 'standby'];
 const RESTART_DELAY_MS = 300;
 
 export type HandsFreeMode = 'standby' | 'active' | 'disabled';
@@ -228,7 +228,7 @@ export function HandsFreeProvider({ children }: { children: ReactNode }) {
     if (restartTimerRef.current) clearTimeout(restartTimerRef.current);
     try {
       ExpoSpeechRecognitionModule.stop();
-    } catch {}
+    } catch { }
     setIsListening(false);
     changeMode('disabled');
   }, [changeMode]);
@@ -259,7 +259,7 @@ export function HandsFreeProvider({ children }: { children: ReactNode }) {
     // Physically stop the mic so it can't capture TTS audio
     try {
       ExpoSpeechRecognitionModule.stop();
-    } catch {}
+    } catch { }
   }, []);
 
   const resumeAfterTTS = useCallback(() => {
@@ -282,7 +282,7 @@ export function HandsFreeProvider({ children }: { children: ReactNode }) {
       if (restartTimerRef.current) clearTimeout(restartTimerRef.current);
       try {
         ExpoSpeechRecognitionModule.stop();
-      } catch {}
+      } catch { }
     };
   }, []);
 

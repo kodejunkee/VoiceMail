@@ -17,5 +17,5 @@ export const Config = {
     'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhnZm9vYmZvaG5paWFva2d2ZGdtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzc3MTc1NDMsImV4cCI6MjA5MzI5MzU0M30.YwGT-ecx9Npe0VlucfTCyxH5rLYadtqSyNXuD1ew16U',
 
   // Backend API
-  API_URL: extra.API_URL || 'http://10.41.239.13:3001',
+  API_URL: extra.API_URL || 'http://10.139.93.13:3001',
 } as const;
